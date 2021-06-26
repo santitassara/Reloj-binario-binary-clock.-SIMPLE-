@@ -1,19 +1,16 @@
-// Arduino 24h Binary Clock with Seconds. (17 LEDs total)
-// You can find a demonstration video of this project
-// here on Youtube: https://www.youtube.com/watch?v=R1rWMhTKyh0
-// Full project on Hackter.io : https://www.hackster.io/peter-lunk/arduino-24h-binary-clock-with-seconds-17-leds-total-2c2374
-// Greetings, MrLunk
+// 24Hs Reloj Binario con segundero Arduino ATMEGA328p.  Arduino 24h Binary Clock with Seconds. (17 LEDs total)
+
 
  
 
-// pins 2 - 13 are the regular digital pwm pins.
+// pins 2 - 13  son los tipicos pins pwm. / are the regular digital pwm pins.
 int ledPinsSec[] = {0, 0, 0, 0, 0, 0};
 int ledPinsMin[] = {8, 9, 10, 11, 12, 13};
 
-// pins 14 - 20 are the analog pins 0 - 5 used as digital pwm pins  
+// pins 14 - 20 son los pins analogicos. / are the analog pins.   0 - 5  son usados como pins pwm digitales. / used as digital pwm pins  
 int ledPinsHr[] = {14, 15, 16, 17, 18, 19};
 
-// set Start time here
+//Seteo de tiempo de inicio / set Start time here
 int countS = 0;   // Seconds
 int countM = 59;  // Minutes
 int countH = 23;  // Hours
@@ -176,8 +173,8 @@ if ((estado_horas  == HIGH) && (estado_minutos == LOW))
 
 
 
-  delay(1000);   // 1000 milliseconds = approx. 1 second delay
-  // ADJUST for fast or slow running clock here, in milliseconds.
+  delay(1000);   // 1000 milisegundos = aproximado 1 segundo de delay / milliseconds = approx. 1 second delay
+  // AJUSTABLE PARA MAS RAPIDO O LENTO FUNCIONAMIENTO DEL RELOJ EN MILISEGUNDOS. / ADJUST for fast or slow running clock here, in milliseconds.
 
 
   
